@@ -5,7 +5,7 @@ router.post('/login', async (req, res) => {
       if (!userData) {
         res
           .status(400)
-          .json({ message: 'Incorrect email or password, please try again' });
+          .json({ message: 'Invalid email or password, please try again' });
         return;
       }
   
@@ -14,7 +14,7 @@ router.post('/login', async (req, res) => {
       if (!validPassword) {
         res
           .status(400)
-          .json({ message: 'Incorrect email or password, please try again' });
+          .json({ message: 'Invalid email or password, please try again' });
         return;
       }
       
@@ -24,15 +24,13 @@ router.post('/login', async (req, res) => {
         req.session.user_name = userData.user_name
         req.session.logged_in = true;
         
-        res.json({ user: userData, message: 'You are now logged in!' });
+        res.json({ user: userData, message: 'Successfully logged in' });
       });
-  
     } catch (err) {
       res.status(400).json(err);
     }
   });
 
-  // Takes user back to login page 
   router.post('/logout', (req, res) => {
     //
     if (req.session.logged_in) {
@@ -40,7 +38,6 @@ router.post('/login', async (req, res) => {
         res.status(204).end();
       });
     } else {
-      // If the user is not logged in, there is no session to destroy
       res.status(404).end();
     }
   });
