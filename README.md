@@ -28,7 +28,7 @@ The following necessary dependencies must be installed to run the application:
 
 ## Usage
 
-To use this application:
+To use this application please visit <https://ltrapaga-tech-blog.herokuapp.com/>.
 
 ## License
 
