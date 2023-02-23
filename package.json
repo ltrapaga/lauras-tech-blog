@@ -1,17 +1,21 @@
 {
-  "name": "challenge-14",
+  "name": "lauras-tech-blog",
   "version": "1.0.0",
-  "description": "",
+  "description": "Lauras Tech Blog",
+  "engines": {
+    "node": "16.19.0",
+    "npm": "8.19.3"
+  },
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "schema": "mysql -u root -p < db/schema.sql",
-    "seed": "node seeds/index.js"
+    "seed": "node seeds/index.js",
+    "schema": "mysql -u root -p < db/schema.sql"
   },
   "keywords": [],
   "author": "",
-  "license": "MIT",
+  "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "connect-session-sequelize": "^7.1.5",
@@ -19,13 +23,7 @@
     "express": "^4.18.2",
     "express-handlebars": "^6.0.7",
     "express-session": "^1.17.3",
-    "mysql2": "^3.1.0",
+    "mysql2": "^3.1.2",
     "sequelize": "^6.28.0"
-  },
-  "devDependencies": {
-    "eslint": "^8.33.0",
-    "eslint-config-prettier": "^8.6.0",
-    "nodemon": "^2.0.20",
-    "prettier": "^2.8.3"
   }
 }

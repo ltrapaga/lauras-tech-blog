@@ -7,13 +7,17 @@ router.get("/", async (req, res) => {
     const postData = await Post.findAll({
       include: [User],
     });
-    const posts = postData.map((post) => post.get({ plain: true }));
-    res.render("all-posts-admin", { posts, loggedIn: req.session.loggedIn });
+    const allPosts = postData.map((post) => post.get({ plain: true }));
+    res.render("all-posts-admin", {
+      posts: allPosts,
+      loggedIn: req.session.loggedIn,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
+// get request for a single post
 router.get("/post/:id", withAuth, async (req, res) => {
   try {
     const postData = await Post.findOne({
@@ -26,10 +30,15 @@ router.get("/post/:id", withAuth, async (req, res) => {
         },
       ],
     });
+
     if (postData) {
-      const post = postData.get({ plain: true });
-      console.log(post);
-      res.render("single-post", { post, loggedIn: req.session.loggedIn });
+      // data serilization
+      const allPosts = postData.get({ plain: true });
+      console.log(allPosts);
+      res.render("single-post", {
+        post: allPosts,
+        loggedIn: req.session.loggedIn,
+      });
     } else {
       res.status(404).end();
     }
@@ -38,6 +47,7 @@ router.get("/post/:id", withAuth, async (req, res) => {
   }
 });
 
+// get request for login and signup
 router.get("/login", (req, res) => {
   if (req.session.loggedIn) {
     res.redirect("/dashboard");

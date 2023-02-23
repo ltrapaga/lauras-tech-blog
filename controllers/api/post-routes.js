@@ -6,24 +6,28 @@ router.post("/", withAuth, async (req, res) => {
   const body = req.body;
   console.log(body);
   try {
-    const newPost = await Post.create({ ...body, userId: req.session.userId });
-    console.log("Here is the new post: ", newPost);
-    res.json(newPost);
+    const createNewPost = await Post.create({
+      ...body,
+      user_id: req.session.user_id,
+    });
+    console.log("New post: ", createNewPost);
+    res.json(createNewPost);
   } catch (err) {
-    console.log("IT FAILED!", err);
+    console.log("Error creating new post", err);
     res.status(500).json(err);
   }
 });
 
 router.put("/:id", withAuth, async (req, res) => {
   try {
-    console.log("here is the req.body", req.body);
-    const [affectedRows] = await Post.update(req.body, {
+    console.log("req.body:", req.body);
+    const [rowsAffected] = await Post.update(req.body, {
       where: {
         id: req.params.id,
       },
     });
-    if (affectedRows > 0) {
+
+    if (rowsAffected > 0) {
       res.status(200).end();
     } else {
       res.status(404).end();
@@ -35,13 +39,13 @@ router.put("/:id", withAuth, async (req, res) => {
 
 router.delete("/:id", withAuth, async (req, res) => {
   try {
-    const [affectedRows] = Post.destroy({
+    const [rowsAffected] = Post.destroy({
       where: {
         id: req.params.id,
       },
     });
 
-    if (affectedRows > 0) {
+    if (rowsAffected > 0) {
       res.status(200).end();
     } else {
       res.status(404).end();

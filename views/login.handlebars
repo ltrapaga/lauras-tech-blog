@@ -1,25 +1,19 @@
 <div class="card">
-
-    <h2 class="card-header">Login</h2>
-
-    <form class="card-body login-form">
-
-        <div class="form-group">
-            <label class="form-label">Username:</label>
-            <input class="form-input" type="text" id="login-username" />
-        </div>
-
-        <div class="form-group">
-            <label class="form-label">Password:</label>
-            <input class="form-input" type="password" id="login-password" />
-        </div>
-
-        <div class="form-group">
-            <button class="btn btn-primary" type="submit">Login</button>
-        </div>
-
-    </form>
-    <br>
-    <p>Don't have an account? Sign up <a href="/signup">here!</a></p>
+  <h2 class="card-header">LOGIN</h2>
+  <form id="login" class="card-body login">
+    <div class="login-inputs">
+      <label class="form-label">Username:</label>
+      <input class="form-input" type="text" id="username-login" />
+    </div>
+    <div class="login-inputs">
+      <label class="form-label">Password:</label>
+      <input class="form-input" type="password" id="password-login" />
+    </div>
+    <div class="login-inputs">
+      <button class="btn btn-primary" type="submit">LOGIN</button>
+    </div>
+  </form>
+  <br>
+  <a href="/signup">Click here to Sign Up</a>
 </div>
 <script src="/js/login.js"></script>

@@ -8,24 +8,27 @@ router.get("/", withAuth, async (req, res) => {
       include: [User],
     });
 
-    const comments = commentData.map((comment) => comment.get({ plain: true }));
-    console.log(comments);
+    const comment = commentData.map((comment) => comment.get({ plain: true }));
 
-    res.render("single-post", { comments, loggedIn: req.session.loggedIn });
+    console.log(comment);
+    res.render("single-post", {
+      comments: comment,
+      loggedIn: req.session.loggedIn,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
 router.post("/", withAuth, async (req, res) => {
-  const body = req.body;
+  const bodies = req.body;
 
   try {
-    const newComment = await Comment.create({
-      ...body,
-      userId: req.session.userId,
+    const createComment = await Comment.create({
+      ...bodies,
+      user_id: req.session.user_id,
     });
-    res.json(newComment);
+    res.json(createComment);
   } catch (err) {
     res.status(500).json(err);
   }

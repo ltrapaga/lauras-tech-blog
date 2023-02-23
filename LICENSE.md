@@ -1,57 +1,21 @@
-# Friendly Chat App
+MIT License
 
-## Description
+Copyright (c) 2023 ltrapaga
 
-Introducing Friendly, our new chat application. Friendly is designed to help you connect with like-minded people and potential new friends! With our app, you can easily find and chat with strangers who could share similar interests and hobbies. Our app is user-friendly, so you can express your unique personality while chatting with new friends. Plus, we take your privacy seriously and ensure your conversations are always secure. Expand your social circle and find new friends with ease using our chat app!
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-## Table of Contents
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-* [Installation](#installation)
-* [Usage](#usage)
-* [License](#license)
-* [Contributing](#contributions)
-* [Tests](#tests)
-* [Questions](#questions)
-
-## Installation
-
-The following necessary dependencies must be installed to run the application:
-
-* MySQL
-* Dotenv
-* Express
-* Express-session
-* Express-handlebars
-* Sequelize
-* Connect-session-sequelize
-* Bcrypt
-* Socket.IO
-
-## Usage
-
-To use this application:
-
-## License
-
- [![License](<https://img.shields.io/badge/License-MIT-yellow.svg>)](<https://opensource.org/licenses/MIT>)
-
-## Contributions
-
-Contributors:
-
-* Calvin Chern
-* Jairo Macassi
-* Issa Diouf
-* Laura Trapaga
-
-## Tests
-
-The following is needed to run tests: N/A
-
-## Questions
-
-If you have any questions about the repository contact the contributors directly at:
-
-Calvin Chern: [Email](mailto:calvin.chern24@gmail.com) | [Github](<https://github.com/cchern>)
-
-Laura Trapaga: [Email](mailto:trapaga9@gmail.com) | [Github](<https://github.com/ltrapaga>)
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

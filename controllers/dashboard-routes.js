@@ -5,15 +5,15 @@ const withAuth = require("../utils/auth");
 router.get("/", withAuth, async (req, res) => {
   try {
     const postData = await Post.findAll({
-      where: { userId: req.session.userId },
+      where: { user_id: req.session.user_id },
       include: [User],
     });
+    const allPosts = postData.map((post) => post.get({ plain: true }));
+    console.log(allPosts);
 
-    const posts = postData.map((post) => post.get({ plain: true }));
-    console.log(posts);
     res.render("all-posts", {
       layout: "dashboard",
-      posts,
+      posts: allPosts,
     });
   } catch (err) {
     res.redirect("login");
@@ -30,11 +30,11 @@ router.get("/edit/:id", withAuth, async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id);
     if (postData) {
-      const post = postData.get({ plain: true });
-      console.log(post);
+      const allPosts = postData.get({ plain: true });
+      console.log(allPosts);
       res.render("edit-post", {
         layout: "dashboard",
-        post,
+        post: allPosts,
       });
     } else {
       res.status(404).end();
