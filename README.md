@@ -2,7 +2,7 @@
 
 ## Description
 
-Want to stay informed about and contribute your own knowledge to the tech community? Look no further! The Tech Blog is a CMS-style blog site that allows developers to create, manage, and modify their own blog posts, as well as their comments on other developers’ posts. Visit <> to start reading and writing about technical concepts, recent advancements, and new technologies!
+Want to stay informed about and contribute your own knowledge to the tech community? Look no further! The Tech Blog is a CMS-style blog site that allows developers to create, manage, and modify their own blog posts, as well as their comments on other developers’ posts. Visit <https://ltrapaga-tech-blog.herokuapp.com/> to start reading and writing about technical concepts, recent advancements, and new technologies!
 
 ## Table of Contents
 
