@@ -30,6 +30,8 @@ The following necessary dependencies must be installed to run the application:
 
 To use this application please visit <https://ltrapaga-tech-blog.herokuapp.com/>.
 
+<img width="1411" alt="image" src="https://user-images.githubusercontent.com/115514660/231230761-d876e4a5-280c-4cb4-8de6-23ffca614c93.png">
+
 ## License
 
  [![License](<https://img.shields.io/badge/License-MIT-yellow.svg>)](<https://opensource.org/licenses/MIT>)
