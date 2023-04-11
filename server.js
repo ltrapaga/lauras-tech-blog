@@ -16,7 +16,7 @@ const hbs = exphbs.create({ helpers });
 const sess = {
   secret: "secret",
   cookie: {
-    maxAge: 5 * 60 * 1000 // Expires after 5 minutes
+    maxAge: 30 * 60 * 1000 // Logs user out after 30 minutes
   },
   resave: false,
   saveUninitialized: true,
